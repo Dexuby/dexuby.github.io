@@ -20,8 +20,7 @@
         <div class="intro">hey.</div>
         <div class="icons-social">
             <a target="_blank" href="https://github.com/dexuby"><i class="fab fa-github"></i></a>
-            <a class="popup" onclick=showPopup()><i class="fab fa-discord"></i><span class="popuptext"
-                    id="discordPopup">dex#3102</span></a>
+            <a class="popup" onclick=showPopup()><i class="fab fa-discord"></i><span class="popuptext" onclick=copyToClipboard() id="discordPopup">dex#3102</span></a>
         </div>
     </main>
 </body>
@@ -30,6 +29,10 @@
     function showPopup() {
         var popup = document.getElementById("discordPopup");
         popup.classList.toggle("show");
+    }
+    
+    function copyToClipboard() {
+	    navigator.clipboard.writeText("dex#3102");
     }
 </script>
 
